@@ -3,13 +3,13 @@ const ctx = canvas.getContext('2d');
 ctx.width = 675;
 ctx.height=353;
 
-var intervalo=10;
+const intervalo=10;
 var tempo =0;
-var maxtempo = 10000;
+const maxtempo = 10000;
 
-var somMove = new Audio("chute.ogg");
-var somPancada = new Audio("pancada.ogg");
-var somAh = new Audio("ah.ogg");
+const somMove = new Audio("chute.ogg");
+const somPancada = new Audio("pancada.ogg");
+const somAh = new Audio("ah.ogg");
 
 function Personagem(imagem, x, y, h, w) {
     this.x=x;
@@ -196,7 +196,7 @@ var GameLoop = function(){
 }
 
 document.onkeydown = function(e){
-    var keycode;
+    let keycode;
     if (window.event) keycode = window.event.keyCode;
     else if (e) keycode = e.which;
     if (keycode===40) {
